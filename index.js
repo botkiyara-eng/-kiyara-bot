@@ -80,6 +80,10 @@ async function connectToWhatsApp() {
         }
     });
 }
-
+const http = require('http');
+http.createServer((req, res) => {
+  res.write('Kiyara Bot is running!');
+  res.end();
+}).listen(process.env.PORT || 3000);
 connectToWhatsApp();
-```
+
